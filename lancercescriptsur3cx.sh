@@ -156,7 +156,7 @@ function ConfSudoers(){
 }
 function CopyScripts(){
 	echo "Installation des scripts 3CX" >> logs
-	cd /tmp/ScriptWazoXivoDeploiement ||  exit 1
+	cd /tmp/Script3CXDeploiement ||  exit 1
 	cp commandnrpe/command_nrpe.cfg /usr/local/nagios/etc/command_nrpe.cfg
 	cp base/checkversion3cx.sh /usr/local/nagios/libexec/checkversion3cx.sh
 	cp base/checkuptime3cx.sh /usr/local/nagios/libexec/checkuptime3cx.sh
