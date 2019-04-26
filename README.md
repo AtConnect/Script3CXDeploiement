@@ -1,4 +1,4 @@
-# Script déploiement Centreon pour Wazo/Xivo
+# Script déploiement Centreon pour 3CX
 
 This script has been writed by Kévin Perez for AtConnect Anglet
 
@@ -16,10 +16,10 @@ apt-get update && apt-get install git-core -y && apt-get install curl -y
 # Step 2 - Clone the repository and install it
 ```
 cd /tmp
-git clone https://github.com/AtConnect/ScriptWazoXivoDeploiement
-cd ScriptWazoXivoDeploiement
-chmod a+x lancercescriptsurwazoxivo.sh
-./lancercescriptsurwazoxivo.sh
+git clone https://github.com/AtConnect/Script3CXDeploiement
+cd Script3CXDeploiement
+chmod a+x lancercescriptsur3cx.sh
+./lancercescriptsur3cx.sh
 ```
 
 
