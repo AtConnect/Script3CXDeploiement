@@ -155,13 +155,11 @@ function ConfSudoers(){
 	echo "nagios ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 }
 function CopyScripts(){
-	echo "Installation des scripts wazo/xivo" >> logs
+	echo "Installation des scripts 3CX" >> logs
 	cd /tmp/ScriptWazoXivoDeploiement ||  exit 1
 	cp commandnrpe/command_nrpe.cfg /usr/local/nagios/etc/command_nrpe.cfg
-	cp base/nagisk.pl /usr/local/nagios/libexec/nagisk.pl
-	cp base/check_services_wazo_xivo.pl /usr/local/nagios/libexec/check_services_wazo_xivo.pl
-	cp base/checkversionwazoxivo.sh /usr/local/nagios/libexec/checkversionwazoxivo.sh
-	cp base/checkuptimewazoxivo.sh /usr/local/nagios/libexec/checkuptimewazoxivo.sh
+	cp base/checkversion3cx.sh /usr/local/nagios/libexec/checkversion3cx.sh
+	cp base/checkuptime3cx.sh /usr/local/nagios/libexec/checkuptime3cx.sh
 	cd /usr/local/nagios ||  exit 1
 	chmod -R 755 libexec/
 }
@@ -178,7 +176,7 @@ main() {
     else
         echo
         echo "################################################################################" 
-		echo -e "\033[45m#               Installation of NRPE and NAGIOS for Centreon                   #\033[0m"
+		echo -e "\033[45m#               Installation of NRPE and NAGIOS on 3CX for Centreon                 #\033[0m"
 		echo -e "\033[45m#                     Compatible with Debian 7/8/9 only                        #\033[0m"
 		echo "#                    Writed by Kévin Perez for AtConnect                       #"
 		echo "# The task is in progress, please wait a few minutes while i'm doing your job !#"
